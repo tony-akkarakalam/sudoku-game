@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sudoku Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-container">
+
+    <div class="header">
+        <h1>Sudoku</h1>
+        <div class="timer" id="timer">00:00</div>
+    </div>
+
+    <div class="sudoku-container">
+        <div class="sudoku-grid" id="sudoku-grid"></div>
+    </div>
+
+    <div class="controls">
+        <select id="difficulty" class="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium" selected>Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+
+        <button class="btn primary" id="check-btn">Check Solution</button>
+        <button class="btn secondary" id="new-game-btn">New Game</button>
+    </div>
+
+</div>
+
+<div class="modal hidden" id="completion-modal">
+    <div class="modal-content">
+        <h2>🎉 Sudoku Solved!</h2>
+        <p id="final-time"></p>
+        <button class="btn primary" id="play-again-btn">Play Again</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
